@@ -2,6 +2,7 @@
 using ForumDEG.Models;
 using ForumDEG.Utils;
 using ForumDEG.Views;
+using PushNotification.Plugin;
 using System;
 using System.Diagnostics;
 using Xamarin.Forms;
@@ -32,6 +33,7 @@ namespace ForumDEG {
 
         protected override void OnStart() {
             // Handle when your app starts
+            CrossPushNotification.Current.Register();
         }
 
         protected override void OnSleep() {
